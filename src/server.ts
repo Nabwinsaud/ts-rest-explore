@@ -3,18 +3,18 @@
 //* drizzle performance is better than prisma
 //* prisma is more mature than drizzle
 //* prisma have more features than drizzle
-import express from "express";
+import express, { type Express } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { createExpressEndpoints, initServer } from "@ts-rest/express";
-import { contract } from "./contract";
+import { contract } from "./contract/contract";
 const app = express();
 import { PrismaClient } from "@prisma/client";
 import { generateOpenApi } from "@ts-rest/open-api";
 const prisma = new PrismaClient();
 import * as swaggerUi from "swagger-ui-express";
-import { db } from "./src";
-import { users } from "./src/schema";
+import { db } from ".";
+import { users } from "./schema";
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));

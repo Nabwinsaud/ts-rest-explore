@@ -1,7 +1,7 @@
 import { Post } from "@prisma/client";
 import { initContract } from "@ts-rest/core";
 import { z } from "zod";
-import { Users } from "./src/schema";
+import { Users } from "../schema";
 
 const c = initContract();
 
@@ -12,7 +12,7 @@ const PostSchema = z.object({
 });
 
 const drizzleSchema = z.object({
-  id: z.number(),
+  id: z.string().optional(),
   name: z.string(),
 });
 export const contract = c.router({

@@ -1,8 +1,8 @@
-import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, varchar, uuid } from "drizzle-orm/pg-core";
 import { InferModel } from "drizzle-orm";
 
 export const users = pgTable("users", {
-  id: serial("id").primaryKey(),
+  id: uuid("id").defaultRandom(),
   name: text("full_name"),
 });
 

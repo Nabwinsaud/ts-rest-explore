@@ -1,0 +1,40 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "2f12724e-f7ce-4a95-b66e-96db34d8ea9d",
+  "prevId": "4dd398e5-89c6-497b-b077-c472ceed52c0",
+  "tables": {
+    "users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id::uuid": {
+          "name": "id::uuid",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "gen_random_uuid()"
+        },
+        "full_name": {
+          "name": "full_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {
+      "\"users\".\"id\"": "\"users\".\"id::uuid\""
+    }
+  }
+}
